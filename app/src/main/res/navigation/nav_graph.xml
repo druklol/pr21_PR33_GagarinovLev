@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.pr21_pr_33_gagarinovlev.CrimeFragment"
+        tools:layout="@layout/fragment_crime">
+        <action
+            android:id="@+id/action_FirstFragment_to_fragment_solved_crime"
+            app:destination="@id/fragment_solved_crime" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_solved_crime"
+        android:name="com.example.pr21_pr_33_gagarinovlev.Fragment_solved_crime"
+        android:label="fragment_solved_crime"
+        tools:layout="@layout/fragment_solved_crime" >
+        <action
+            android:id="@+id/action_fragment_solved_crime_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+</navigation>
